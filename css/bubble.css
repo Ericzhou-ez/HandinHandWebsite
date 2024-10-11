@@ -241,7 +241,7 @@ html, body {
 
  .glass-hero {
   position: absolute;
-  top: 54px;
+  top: 30px;
   margin: 5vh 3vw;
   width: 94vw;
   height: calc(90vh - 55px);
