@@ -1,0 +1,329 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner{
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    background-image: url(/image/bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 260px;
+    left: calc(50% - 100px);
+    top: 40%;
+    transform: translateY(-50%);
+    transform-style: preserve-3d;
+    transform: perspective(400px);
+    animation: autoRun 30s linear infinite;
+    z-index: 2;
+}
+
+.eventsTitle > h2 {
+    z-index: 2;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(600px) rotateX(8deg) rotateY(0deg);
+    }to{
+        transform: perspective(600px) rotateX(10deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(320px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eventsTitle {
+    font-size: 4rem;
+    position: absolute;
+    top: 650px;
+    left: 20px;
+
+    z-index: 2;
+}
+
+@media screen and (max-width: 700px) {
+    .banner .slider .item{
+        position: absolute;
+        inset: 0 0 0 0;
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(200px);
+    }
+    .banner .slider{
+        position: absolute;
+        width: 200px;
+        top: 30%;
+        height: 250px;
+        left: calc(50% - 100px);
+        transform-style: preserve-3d;
+        transform: perspective(400px);
+        animation: autoRun 26s linear infinite;
+        z-index: 2;
+    }
+    .banner{
+        width: 100%;
+        height: 60vh;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        background-position: top;
+    }
+    .eventsTitle > h1 {
+        font-size: 3rem;
+    }
+    .eventsTitle > h2 {
+        font-size: 2.6rem;
+    }
+    .eventsTitle {
+        top: 540px !important;
+    }
+    .initiatives {
+        position: absolute;
+        top: 600px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner .slider .item{
+        position: absolute;
+        inset: 0 0 0 0;
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(160px);
+    }
+    .banner .slider{
+        position: absolute;
+        width: 200px;
+        top: 30%;
+        height: 250px;
+        left: calc(50% - 100px);
+        transform-style: preserve-3d;
+        transform: perspective(400px);
+        animation: autoRun 20s linear infinite;
+        z-index: 2;
+    }
+    .banner{
+        width: 100%;
+        height: 55vh;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        background-position: top;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .eventTitle h2 {
+        font-size: 0.6rem !important;
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .eventsTitle > h1 {
+        font-size: 6rem;
+    }
+    .eventsTitle > h2 {
+        font-size: 5.5rem;
+    }
+    .initiatives {
+        position: absolute;
+        top: 620px !important;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .eventsTitle {
+        top: 660px !important;
+        left: 100px !important;
+    }
+}
+
+.initiatives {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1540px) {
+    .initiatives {
+        padding: 0 2% !important;
+    }
+    .eventContainer {
+        gap: 30px;
+        margin-right: 12px;
+    }
+    .eventDescription p {
+        padding: 1% 0;
+        padding-right: 2%;
+        line-height: 1.82rem;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .initiatives {
+        padding: 0 2% !important;
+    }
+    .eventContainer {
+        gap: 10px;
+        margin-right: 10px;
+    }
+    .eventDescription p {
+        padding: 1% 0;
+        line-height: 1.7rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .initiatives {
+        position: absolute;
+        top: 880px !important;
+        padding: 0 8%;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin: 0 auto !important;
+        width: 100%;
+    }
+    .eventImage {
+        max-width: 450px;
+    }
+    .eventDescription p {
+        font-size: 1.05rem;
+    }
+    .eventContainer {
+        width: 100%;
+        margin: 0 auto 20px !important;
+    }
+    .eventTitle {
+        top: 680px !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .typed-text {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .eventImage {
+        max-width: 380px !important;
+    }
+    .eventContainer {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    
+        gap: 12px !important;
+        margin-bottom: 20px !important;
+    }
+    .eventDescription {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        flex-grow: 1;
+    }
+    
+    .eventDescription h3 {
+        font-size: 2rem;
+        padding: 0 1% !important;
+    }
+    
+    .eventDescription p {
+        padding: 0 1% !important;
+        padding-right: 0 !important;
+        line-height: 1.82rem;
+    }
+    .initiatives {
+        position: absolute;
+        top: 880px !important;
+    }
+    .eventsTitle {
+        top: 500px !important;
+    }
+}
+
+.eventContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 50px;
+    margin-bottom: 25px; 
+    max-width: 860px;
+
+    margin-right: 18px;
+}
+
+.eventImage {
+    display: inline-block;
+    
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+
+    object-fit: contain;
+}
+
+.eventDescription {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+.eventDescription h3 {
+    font-size: 2.2rem;
+}
+
+.eventDescription p {
+    padding: 10% 0;
+    padding-right: 17%;
+    line-height: 1.82rem;
+}
+
+.typed-text {
+    white-space: nowrap;
+    border-right: 4px solid orange;
+    display: inline-block;
+    padding-right: 5px;
+    animation: blinkCursor 0.8s steps(44) infinite normal;
+}
+
+@keyframes blinkCursor {
+    from { border-right-color: orange; }
+    to { border-right-color: transparent; }
+}
+
+
+.footerContainer {
+    position: absolute;
+    top: 2300px;
+}

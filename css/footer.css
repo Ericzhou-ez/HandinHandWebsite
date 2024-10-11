@@ -1,0 +1,122 @@
+.heroImage {
+   width: 100%;
+   height: auto;
+   place-content: center;
+   -webkit-mask-image: url(../image/42357.svg);
+   -webkit-mask-size: contain;
+   -webkit-mask-repeat: no-repeat;
+}
+
+.rightFooter {
+   place-content: center;
+}
+
+.middleFooter {
+   display: grid;
+   grid-template-columns: 1fr 1fr 0.9fr;
+   padding-top: 20px;
+   padding-bottom: 10px;
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
+.leftFooter {
+   padding-top: 20px;
+   padding-left: 20px;
+}
+
+.footerNote {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: flex-start;
+   padding-right: 30px;
+}
+
+.footerNote p {
+   display: inline-block;
+}
+
+.aboutUsFooterContainer h3, .InitiativesFooterContainer h3, .ContactFooterContainer h3 {
+   font-size: 1.25rem;
+   padding: 10px 5px;
+}
+
+.aboutUsFooterContainer p, .InitiativesFooterContainer p, .ContactFooterContainer p {
+   font-size: 0.95rem;
+   padding: 10px 5px;
+}
+
+footer a {
+   color: white;
+   text-decoration: none;
+}
+
+footer {
+   display: grid;
+   grid-template-columns: 1fr 2.3fr 0.6fr;
+   color: white;
+   position: relative;
+   overflow: hidden;
+
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   backdrop-filter: blur(10px);
+   background-color: rgb(21, 43, 0); 
+   transition: background-color 0.5s ease-in-out;
+   
+}
+
+.leftFooter .heroImage {
+   display: none;
+}
+
+.footerLogo {
+   transition: opacity 0.23s, transform 0.33s;
+}
+
+.footerLogo:hover {
+   opacity: 0.86;
+   transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+   footer {
+      grid-template-columns: 0.8fr 2.3fr 0.6fr !important;
+   }
+}
+
+@media screen and (max-width: 860px) {
+   footer {
+      grid-template-columns: 0.6fr 2.3fr !important;
+   }
+   .rightFooter {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   footer {
+      display: flex !important;
+      flex-direction: column;
+   }
+   .leftFooter .heroImage {
+      display: inline-block;
+   }
+   .leftFooter {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+   }
+   .aboutUsFooterContainer h3, .InitiativesFooterContainer h3, .ContactFooterContainer h3 {
+      font-size: 1rem;
+      padding: 5px 3px;
+   }
+   
+   .aboutUsFooterContainer p, .InitiativesFooterContainer p, .ContactFooterContainer p {
+      font-size: 0.75rem;
+      padding: 5px 3px;
+   }
+   .middleFooter {
+      grid-template-columns: 0.8fr 1fr 1fr;
+      padding: 5px 10px;
+   }
+}

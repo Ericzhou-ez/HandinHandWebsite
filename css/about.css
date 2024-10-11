@@ -1,0 +1,168 @@
+.heroHeading > h2 {
+   display: inline-block;
+   font-size: clamp(0.8rem, 2vw + 0.5rem, 1.3rem);
+   font-weight: 600;
+   letter-spacing: 0.03rem;
+   width: 100%;
+}
+
+.heroHeading > h1 {
+   display: inline-block;
+   letter-spacing: 0.035rem;
+   font-size: clamp(5rem, 10vw + 3rem, 18rem);
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 15px;
+
+   color: transparent;
+   background: #2d0768;  /* fallback for old browsers */
+   background-image: linear-gradient(to top right, #a2628f 0%, thistle 30%, #fde233 100%);
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+.heroHeading {
+   display: flex;
+   flex-direction: column;
+   max-width: 1000px;
+
+   margin: 0 auto;
+   padding: 15px 30px;
+
+}
+
+.heroHeading > p {
+   padding: 10px 0;
+   line-height: 1.6rem;
+   font-size: 1.15rem;
+   letter-spacing: 0.033rem;
+   font-weight: 300;
+}
+
+.slogan {
+   display: inline-block;
+   font-size: 1.15rem;
+   font-weight: 600;
+   text-align: justify;
+
+   color: #070d68;
+ }
+
+ .slogan-container {
+   place-content: center;
+   gap: 10px;
+   padding: 15px 0;
+
+   max-width: 1000px;
+ }
+
+ #typed-text {
+   color: #2d0768;
+   font-weight: 500;
+
+   font-size: 1.2rem;
+
+   background-image: linear-gradient( 135deg, #f5716a 10%, #930db2 100%);
+   -webkit-background-clip: text;
+   color: transparent;
+ }
+ 
+ #cursor {
+   display: inline-block;
+   width: 2px;
+   height: 1.2rem; /* Adjust this height to match the text size */
+   border-right: 1px solid #000000;
+   animation: blink-caret 0.75s step-end infinite;
+   margin-left: 2px; /* Optional: Adjust spacing between text and cursor */
+ }
+ 
+ @keyframes blink-caret {
+   from, to { background-color: transparent; }
+   50% { background-color: #2d0768; }
+ }
+
+ main {
+   margin: 0 30px;
+ }
+
+ @media screen and (max-width: 1080px) {
+   .executivesContainer {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+ }
+
+ @media screen and (max-width: 649px) {
+   .executivesContainer {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+    }
+ }
+
+ .executivesContainer {
+   background-color: white;
+   border-radius: 25px;
+
+   max-width: 1000px;
+   margin: 0 auto;
+   margin-top: 20px;
+   padding: 25px 25px;
+
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 16px;
+   margin-bottom: 50px;
+
+   height: 100%;
+ }
+
+ .potraitContainer {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+.potraitContainer img {
+   width: 100%;
+   height: auto;
+   display: block;
+
+   border-top-left-radius: 25px;
+   border-top-right-radius: 25px;
+}
+
+.exec {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   justify-content: space-between;
+
+   height: 100%;
+   width: 100%;
+}
+
+.description > h2 {
+   font-weight: 500;
+}
+
+.readMore {
+   font-size: 0.7rem;
+   padding-top: 40px;
+   padding-bottom: 5px;
+}
+
+.roleDescription {
+   font-size: 1rem;
+}
+
+.description {
+   margin-top: 8px;
+   padding: 15px 18px;
+   
+   display: flex;
+   flex-direction: column;
+
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+}

@@ -1,0 +1,199 @@
+p {
+   color: #292727;
+   line-height: 1.63rem;
+}
+
+main {
+   margin: 20px 0;
+   padding: 0;
+}
+
+.splashBannerContainer {
+   position: relative;
+   width: 100%;
+   height: 500px;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+.splashBanner {
+   height: 500px;
+   width: 100%;
+   object-fit: cover;
+
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+
+   transform: none !important;
+   transition: none !important;
+   opacity: 1 !important;
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;
+}
+
+.smallSplashBanner {
+   height: 300px;
+   width: 100%;
+   object-fit: cover;
+
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+
+   transform: none !important;
+   transition: none !important;
+   opacity: 1 !important;
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;
+}
+
+.largeSplashBanner {
+   height: 600px;
+   width: 100%;
+   object-fit: cover;
+
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+
+   transform: none !important;
+   transition: none !important;
+   opacity: 1 !important;
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;
+}
+
+@media screen and (max-width: 750px) {
+   .splashBanner {
+      display: none;
+   }
+   .largeSplashBanner {
+      display: none;
+   }
+   .smallSplashBanner {
+      display: block;
+   }
+   .splashBannerContainer {
+      height: 300px;
+   }
+   .wrapper {
+      margin-top: 30px !important;
+   }
+   .partnerAppreciationMessage {
+      padding-top: 0.8rem !important;
+   }
+}
+
+@media screen and (min-width: 750px) {
+   .smallSplashBanner {
+      display: none;
+   }
+   .splashBanner {
+      display: block;
+   }
+   .largeSplashBanner {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 980px) {
+   .partnerContainer {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media screen and (min-width: 1280px) {
+   .splashBanner {
+      display: none;
+   }
+   .smallSplashBanner {
+      display: none;
+   }
+   .largeSplashBanner {
+      display: block;
+   }
+   .splashBannerContainer {
+      height: 600px;
+   }
+}
+
+.wrapper {
+   margin: 0 auto;
+   margin-top: 50px;
+   padding: 0 5%;
+   max-width: 1280px;
+   margin-bottom: 50px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin-top: 16px;
+  padding-bottom: 20px;
+}
+
+.partnerAppreciationMessage {
+   padding-top: 1.8rem;
+   align-self: flex-start;
+   text-align: justify;
+   color: #666666;
+   max-width: 900px;
+   font-size: 1.2rem;
+   line-height: 1.74rem;
+   font-size: 1.23rem;
+   letter-spacing: 0.033rem;
+   font-weight: 400;
+}
+
+.partnerContainer {
+   max-width: 1280px;
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+   margin: auto;
+}
+
+.partner {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-areas: 
+      "img img img p p p p p p p p p";
+   padding: 1.5rem 1.2rem;
+
+   border-radius: 26px;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+
+   line-height: 1.6rem;
+   font-size: 1.23rem;
+   letter-spacing: 0.033rem;
+   font-weight: 300;
+}
+
+.partnerImage {
+   grid-area: img;
+   place-content: center;
+   width: 100%;
+   transition: transform 0.25s, opacity 0.2s ease-in-out;
+}
+
+.partnerImage {
+   opacity: 0.9;
+   transform: scale(1.025);
+}
+
+.partnerContainer .partner p {
+   grid-area: p;
+   justify-content: center;
+   letter-spacing: 0.024rem;
+   line-height: 1.75rem;
+   font-size: 1.2rem;
+   padding: 0.5rem;
+   padding-top: 0;
+   margin-left: 1.8rem;
+}
+
+strong {
+   font-weight: 600;
+}

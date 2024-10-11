@@ -1,0 +1,128 @@
+.typing-container {
+   color: #333;
+   max-width: 525px;
+   margin: 0 auto;
+   padding: 15px 20px;
+   font-size: 4rem;
+   line-height: 5.3rem;
+   word-spacing: 0.25rem;
+   letter-spacing: 0.07rem;
+}
+
+.static-text {
+   display: inline-block;
+}
+
+.dynamic-text {
+   background: -webkit-linear-gradient(#eee, #333);
+   -webkit-background-clip: text;
+   background-image: linear-gradient(70deg, #fb6986 0%, #4f6cfd 100%);
+   -webkit-text-fill-color: transparent;
+   display: inline-block;
+}
+
+.cursor {
+   width: 3px; /* Thicker cursor */
+   color: orange; /* Orange cursor */
+   animation: blink 1s infinite;
+   display: inline-block;
+}
+
+@keyframes blink {
+   0% { opacity: 1; }
+   50% { opacity: 0; }
+   100% { opacity: 1; }
+}
+
+body, html {
+   margin: 0;
+   padding: 0;
+   width: 100vw;
+   height: 120vh;
+   overflow-x: hidden;
+   overflow-y: auto;
+   background-color: black;
+}
+
+.heroSection {
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   height: 100vh;
+   z-index: 1;
+   text-align: center;
+}
+
+.heroLogo {
+   transition: transform 0.1s ease-out, opacity 0.1s ease-out, filter 0.2s ease-out;
+   z-index: 2;
+}
+
+.typing-container {
+   opacity: 1;
+   z-index: 3;
+   transition: opacity 0.1s ease-out; /* Even faster transition */
+}
+
+.background-image {
+   position: absolute;
+   top: 80%;
+   left: 50%;
+   width: 10vw;
+   height: 10vh;
+   max-height: 100vh; /* Maximum height set to display height */
+   transform: translate(-50%, -80%);
+   background-image: url(../image/joinUsGradient.jpg);
+   background-size: cover;
+   background-position: center;
+   border-radius: 50%;
+   transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.35s ease-out, filter 0.8s ease-out, border-radius 0.8s ease-out;
+   z-index: 0;
+   opacity: 0;
+   filter: blur(80px);
+   mix-blend-mode: lighten;
+}
+
+.heroText {
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 3rem;
+   font-family: Arial, Helvetica, sans-serif;
+   letter-spacing: 0.18rem;
+   color: white;
+   z-index: 4;
+   opacity: 0;
+   line-height: 3.5rem !important;
+   transition: opacity 0.05s ease-out;
+}
+
+@media screen and (max-width: 1000px) {
+   .heroText {
+      font-size: 2rem !important;
+      line-height: 2.3rem !important;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .heroText {
+      font-size: 1rem !important;
+      line-height: 1.8rem !important;
+      font-weight: 600;
+   }
+   .typing-container {
+      font-size: 2.5rem !important;
+      line-height: 3rem !important;
+   }
+   .heroSection {
+      margin-top: 120px;
+   }
+   .heroText {
+      top: 65%;
+      transform: translate(-50%, -50%);
+   }
+}
+
