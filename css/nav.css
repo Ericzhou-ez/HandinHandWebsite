@@ -3,15 +3,28 @@ ul {
    flex-direction: row;
    justify-content: center;
    align-items: stretch;
-
-   background-color: white;
-
    transition: opacity 0.15s ease-in-out;
    z-index: 999;
+
+   position : fixed;
+   width: 100vw;
+   transition: 0.3s background-color;
 }
 
-ul:hover {
-   background-color: hsl(240, 8%, 97%);
+.hidden {
+   display: none;
+}
+
+.btn-top {
+   z-index: 50;
+   position: fixed;
+   background-color: rgb(4, 26, 56);
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   bottom: 40px;
+   right: 40px;
+   right: 20px;<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m280-400 200-200 200 200H280Z"/></svg>
 }
 
 ul > li > img {
@@ -32,7 +45,7 @@ li > a:hover {
 }
 
 li > a:visited {
-   color: rgb(175, 0, 175);
+   color: rgb(46, 3, 46);
 }
 
 .left {
