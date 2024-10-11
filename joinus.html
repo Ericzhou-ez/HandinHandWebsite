@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us</title>
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/nav.css">
+   <link rel="stylesheet" href="css/joinus.css">
+
+   <!--Favion link-->
+   <link rel="icon" href="image/logo.png" type="image/x-icon">
+
+</head>
+<body>
+   <header>
+      <nav>
+         <ul class="nav-bar" style="list-style-type: none; 
+         background-color: rgb(37, 33, 33);">
+            <div class="left">
+               <li>
+                  <a href="index.html"><img style="padding: 4px 2px;" class="headerLogo" src="image/logoWhite.png" height="50"></a>
+               </li>
+            </div>
+            <div class="middle"></div>
+            <div class="right">
+               <li class="hide-on-mobile"><a style="color: #ffffff;" href="about.html">About</a></li>
+               <li class="hide-on-mobile"><a style="color: white;" href="events.html">Initiatives</a></li>
+               <li class="hide-on-mobile"><a style="color: white;" href="partners.html">Partners</a></li>
+               <li class="hide-on-mobile" style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
+               <li class="hide-on-laptop" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            </div>
+         </ul>
+
+         <script>
+            function showSidebar() {
+               const sidebar = document.querySelector(".sidebar");
+               sidebar.style.display = "flex";
+            }
+         </script>
+
+         <ul class="sidebar" style="list-style-type: none; background-color: rgb(37, 33, 33);">
+            <div class="left">
+               <li onclick="hideSidebar()" style="margin-top: 30px; margin-left: 15px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+               </li>
+            </div>
+            <div class="middle"></div>
+            <div class="right">
+               <li><a style="color: white;" href="about.html">About</a></li>
+               <li><a style="color: white;" href="events.html">Initiatives</a></li>
+               <li><a style="color: white;" href="partners.html">Partners</a></li>
+               <li style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
+            </div>
+         </ul>
+
+         <script>
+            function hideSidebar() {
+               const sidebar = document.querySelector(".sidebar");
+               sidebar.style.display = "none";
+            }
+         </script>
+      </nav>
+   </header>
+
+   <main>
+      <div class="heroSection">
+         <div class="background-image"></div>
+         <img class="heroLogo" src="image/HIUH (800 x 800 px).png" width="300">
+         <div class="typing-container">
+             <span style="display: block; color: white;" class="static-text">Hand in Hand,</span>
+             <span style="display: block; color: white;" class="static-text">Together We</span>
+             <span class="dynamic-text"></span>
+             <span class="cursor">|</span>
+         </div>
+         <div class="heroText"><a href="https://docs.google.com/forms/d/13FtRITSln6H3yb7CvkBXTxNGMYBdXeWsE18trga6OOw/viewform?edit_requested=true" target="_blank" style="color: white; font-family: 'Courier New', Courier, monospace;">Join HIH</a> to help break the stigma around mental health and support a community that cares deeply about well-being and genuine connections.</div>
+         <script src="joinUsTyping.js"></script>
+     </div> 
+     <script>
+         window.addEventListener('scroll', function() {
+             const heroLogo = document.querySelector('.heroLogo');
+             const typingContainer = document.querySelector('.typing-container');
+             const backgroundImage = document.querySelector('.background-image');
+             const heroText = document.querySelector('.heroText');
+ 
+             const scrollPercent = window.scrollY / window.innerHeight;
+ 
+             if (scrollPercent > 0.0000000000000000008) {
+                 heroLogo.style.transform = 'scale(' + (1 + scrollPercent * 45) + ')';
+                 heroLogo.style.opacity = 1 - scrollPercent * 6;
+                 heroLogo.style.filter = 'blur(' + scrollPercent * 200 + 'px)';
+                 typingContainer.style.opacity = 1 - scrollPercent * 20;
+                 heroText.style.opacity = scrollPercent * 10;
+             } else {
+                 heroLogo.style.transform = 'scale(1)';
+                 heroLogo.style.opacity = 1;
+                 heroLogo.style.filter = 'none';
+                 typingContainer.style.opacity = 1;
+                 heroText.style.opacity = 0;
+             }
+ 
+             const bgStartScroll = 0.00000001;
+             const bgEndScroll = 0.2;
+ 
+             if (scrollPercent > bgStartScroll) {
+                 const adjustedScrollPercent = (scrollPercent - bgStartScroll) / (bgEndScroll - bgStartScroll);
+                 backgroundImage.style.width = (10 + adjustedScrollPercent * 90) + 'vw';
+                 backgroundImage.style.height = Math.min(10 + adjustedScrollPercent * 90, 100) + 'vh'; 
+                 backgroundImage.style.opacity = adjustedScrollPercent;
+                 backgroundImage.style.filter = 'blur(' + (80 - adjustedScrollPercent * 80) + 'px)';
+                 backgroundImage.style.borderRadius = (50 - adjustedScrollPercent * 50) + '%';
+             } else {
+                 backgroundImage.style.width = '10vw';
+                 backgroundImage.style.height = '10vh';
+                 backgroundImage.style.opacity = '0';
+                 backgroundImage.style.filter = 'blur(80px)';
+                 backgroundImage.style.borderRadius = '50%';
+             }
+         });
+     </script>
+   </main>
+
+   <footer>
+      <div class="leftFooter">
+
+         <div class=leftFooterText>
+            <img class="footerLogo" src="image/logoWhite.png" width="120">
+            <div class="footerNote">
+               <p style="font-weight: 600;">Hand in Hand <br> Together we Go</p>
+               <p style="font-size: 0.8rem;
+               line-height: 0.9rem;">&copy;Eric Zhou 2024 &#124; Hand in Hand BC.
+               All Rights Reserved.</p>
+            </div>
+         </div>   
+
+         <a href="index.html"><img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage"></a>
+
+      </div>
+
+      <div class="middleFooter">
+         <div class="aboutUsFooterContainer">
+            <h3>About Us</h3>
+            <a href="about.html"><p>HIH Core Values</p></a>
+            <a href="about.html"><p>Our Executives</p></a>
+            <a href="partners.html"><p>Partners and Sponsors</p></a>
+         </div>
+         <div class="InitiativesFooterContainer">
+            <h3>Initiatives</h3>
+            <a href="events.html"><p>Peer Tutoring</p></a>
+            <a href="events.html"><p>Fundraisers</p></a>
+            <a href="events.html"><p>HIH Forum</p></a>
+            <a href="events.html"><p>Instagram Community</p></a>
+         </div>
+         <div class="ContactFooterContainer">
+            <h3>Contact HIH</h3>
+            <p>club.handinhand@gmail.com</p>
+            <h3>Follow Us</h3>
+            <a href="https://www.instagram.com/handinhandbc/">
+               <img style="margin: 10px 5px;" src="image/nohat.png" width="18">
+            </a>
+         </div>
+      </div>
+
+      <div class="rightFooter">
+         <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
+
+      </div>
+   
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             const footer = document.querySelector('footer');
+   
+             let intervalId = null;
+   
+             const defaultGradient = () => {
+                 let degree = 0;
+                 const updateGradient = () => {
+                     footer.style.backgroundImage = `linear-gradient(${degree}deg, rgba(21, 43, 0. 0.8), rgba(50, 205, 50, 0.05))`;
+                     degree = (degree + 1) % 360;
+                 };
+                 updateGradient();
+                 return setInterval(updateGradient, 40);
+             };
+   
+             intervalId = defaultGradient();
+   
+             footer.addEventListener('mousemove', function(e) {
+                 clearInterval(intervalId);
+                 intervalId = null;
+   
+                 const rect = footer.getBoundingClientRect();
+                 const x = e.clientX - rect.left; // x position within the element.
+                 const y = e.clientY - rect.top;  // y position within the element.
+                 
+                 footer.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(64, 83, 76, 0.8), rgba(52, 73, 85, 0.4) 50%)`;
+             });
+   
+             footer.addEventListener('mouseleave', function() {
+                 if (!intervalId) {
+                     intervalId = defaultGradient();
+                 }
+             });
+         });
+     </script>
+   </footer>
+</body>
+</html>

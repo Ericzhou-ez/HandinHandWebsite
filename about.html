@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Standard Meta Tags -->
+  <meta name="description" content="At HIH, we are driven by compassion and empathy. Join us in making the world a better place by supporting mental well-being and breaking the stigma around mental health. Meet our executives who lead with heart and innovation.">
+  <meta name="keywords" content="HIH, mental well-being, mental health, empathy, compassion, community, leadership, executives, digital transformation, financial sustainability, operational efficiency">
+  <meta name="author" content="Eric Zhou">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HIH Core Values and Meet Our Executives">
+  <meta property="og:description" content="At HIH, we are driven by compassion and empathy. Join us in making the world a better place by supporting mental well-being and breaking the stigma around mental health. Meet our executives who lead with heart and innovation.">
+  
+   <title>About HIH</title>
+   <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/footer.css">
+
+   <!--Favion link-->
+   <link rel="icon" href="image/logo.png" type="image/x-icon">
+</head>
+
+
+<body>
+   <nav>
+      <ul class="nav-bar" style="list-style-type: none;">
+         <div class="left">
+            <li>
+               <a href="index.html"><img style="padding: 4px 2px;" class="headerLogo" src="image/logo.png" height="50"></a>
+            </li>
+         </div>
+         <div class="middle"></div>
+         <div class="right">
+            <li class="hide-on-mobile"><a href="about.html">About</a></li>
+            <li class="hide-on-mobile"><a href="events.html">Initiatives</a></li>
+            <li class="hide-on-mobile"><a href="partners.html">Partners</a></li>
+            <li class="hide-on-mobile" style="text-wrap: nowrap;"><a href="joinus.html">Contact Us</a></li>
+            <li class="hide-on-laptop" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+         </div>
+      </ul>
+
+      <script>
+         function showSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display = "flex";
+         }
+      </script>
+
+      <ul class="sidebar" style="list-style-type: none; background-color: rgb(37, 33, 33);">
+         <div class="left">
+            <li onclick="hideSidebar()" style="margin-top: 30px; margin-left: 15px;">
+               <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </li>
+         </div>
+         <div class="middle"></div>
+         <div class="right">
+            <li><a style="color: white;" href="about.html">About</a></li>
+            <li><a style="color: white;" href="events.html">Initiatives</a></li>
+            <li><a style="color: white;" href="partners.html">Partners</a></li>
+            <li style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
+         </div>
+      </ul>
+
+      <script>
+         function hideSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display = "none";
+         }
+      </script>
+   </nav>
+
+   <link rel="stylesheet" href="css/nav.css">
+
+   <header>
+      <div class="heroHeading">
+         <h2>HIH Core</h2>
+         <h1><span style="text-wrap: nowrap;">Values</span></h1>
+
+         <p>
+            <span style="font-weight: 600;">The compassion and empathy we share at HIH drive everything we do.</span> We're committed to making the world a better place by supporting mental well-being and we envision a world liberated from mental health stigma, where understanding goes hand in hand with empathy.
+         </p>
+         <p>
+            Our community members contribute uniquely, driven by the fervent passion of uplifting others. Explore our initiatives and you will see diverse efforts united by a common goal:
+         </p>
+
+         <div class="slogan-container">
+            <p class="slogan" id="slogan1" style="font-weight: 600; display: block;">To propel a society wherein,</p>
+            <p class="slogan" id="slogan2"><span id="typed-text"></span><span id="cursor"></span></p>
+         </div>
+         <script src="typing.js"></script>
+      </div>
+   </header>
+
+   <main>
+      <section class="executivesContainer">
+         <article class="Jessie" class="exec">
+            <div class="potraitContainer">
+               <img class="background" src="Members-Protrait/memberFullImage1.png" title="Jessie Luo">
+            </div>
+
+            <div class="description" style="background-color: #303130; color: white;">
+               <h2>Leading with Heart and Compassion&#8212;Hand&ndash;to&ndash;Heart Connections.</h2>
+               <p class="roleDescription">Jessie Luo&#8212;President of <abbr style="text-decoration: none;" title="Hand in Hand">HIH</abbr></p>
+            </div>
+         </article>
+         
+         <article class="Eric" class="exec">
+            <div class="potraitContainer">
+               <img src="Members-Protrait/memberFullImage2.png" title="Eric Zhou">
+            </div>
+
+            <div class="description" style="background-color: #303130; color: white;">
+               <h2>Connecting Communities with Code. Connecting People with People.</h2>
+               <p class="roleDescription">Eric Zhou&#8212;VP &#x7C; CTO</p>
+            </div>
+         </article>
+
+         <article class="Chloe" class="exec">
+            <div class="potraitContainer">
+               <img src="Members-Protrait/memberFullImage3.png" title="Chloe Chen">
+            </div>
+
+            <div class="description" style="background-color: #303130; color: white;">
+               <h2>Inspiring Minds by helping them Grow in their Own Direction.</h2>
+               <p class="roleDescription">Chloe Chen&#8212;CHRO</p>
+            </div>
+         </article>
+
+         <article class="Jason" class="exec">
+            <div class="potraitContainer">
+               <img src="Members-Protrait/memberFullImage4.png" title="Jason Shen">
+            </div>
+
+            <div class="description" style="background-color: #122641; color: white;">
+               <h2>Reimagining Our Finances—Bolstering Our Future.</h2>
+               <p class="roleDescription">Jason Shen&#8212;CFO</p>
+            </div>
+         </article>
+
+         <article class="Anaya" class="exec">
+            <div class="potraitContainer">
+               <img src="Members-Protrait/memberFullImage5.png" title="Anaya">
+            </div>
+
+            <div class="description" style="background-color: #122641; color: white;">
+               <h2>Redefining Connection, Crafting Future-Proof, Inspiring Communities. </h2>
+               <p class="roleDescription">Anaya&#8212;CMO</p>
+            </div>
+         </article>
+
+         <article class="Yolanda" class="exec">
+            <div class="potraitContainer">
+               <img src="Members-Protrait/memberFullImage6.png" title="Yolanda Song">
+            </div>
+
+            <div class="description" style="background-color: #122641; color: white;">
+               <h2>Rethinking Processes, Magnifying Results.</h2>
+               <p class="roleDescription">Yolanda Song&#8212;COO</p>
+            </div>
+         </article>
+      </section>
+   </main>
+
+   <footer>
+      <div class="leftFooter">
+
+         <div class=leftFooterText>
+            <img class="footerLogo" src="image/logoWhite.png" width="120">
+            <div class="footerNote">
+               <p style="font-weight: 600;">Hand in Hand <br> Together we Go</p>
+               <p style="font-size: 0.8rem;
+               line-height: 0.9rem;">&copy;Eric Zhou 2024 &#124; Hand in Hand BC.
+               All Rights Reserved.</p>
+            </div>
+         </div>   
+
+         <a href="index.html"><img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage"></a>
+
+      </div>
+
+      <div class="middleFooter">
+         <div class="aboutUsFooterContainer">
+            <h3>About Us</h3>
+            <a href="about.html"><p>HIH Core Values</p></a>
+            <a href="about.html"><p>Our Executives</p></a>
+            <a href="partners.html"><p>Partners and Sponsors</p></a>
+         </div>
+         <div class="InitiativesFooterContainer">
+            <h3>Initiatives</h3>
+            <a href="events.html"><p>Peer Tutoring</p></a>
+            <a href="events.html"><p>Fundraisers</p></a>
+            <a href="events.html"><p>HIH Forum</p></a>
+            <a href="events.html"><p>Instagram Community</p></a>
+         </div>
+         <div class="ContactFooterContainer">
+            <h3>Contact HIH</h3>
+            <p>club.handinhand@gmail.com</p>
+            <h3>Follow Us</h3>
+            <a href="https://www.instagram.com/handinhandbc/">
+               <img style="margin: 10px 5px;" src="image/nohat.png" width="18">
+            </a>
+         </div>
+      </div>
+
+      <div class="rightFooter">
+         <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
+
+      </div>
+   
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             const footer = document.querySelector('footer');
+   
+             let intervalId = null;
+   
+             const defaultGradient = () => {
+                 let degree = 0;
+                 const updateGradient = () => {
+                     footer.style.backgroundImage = `linear-gradient(${degree}deg, rgba(21, 43, 0. 0.8), rgba(50, 205, 50, 0.05))`;
+                     degree = (degree + 1) % 360;
+                 };
+                 updateGradient();
+                 return setInterval(updateGradient, 40);
+             };
+   
+             intervalId = defaultGradient();
+   
+             footer.addEventListener('mousemove', function(e) {
+                 clearInterval(intervalId);
+                 intervalId = null;
+   
+                 const rect = footer.getBoundingClientRect();
+                 const x = e.clientX - rect.left; // x position within the element.
+                 const y = e.clientY - rect.top;  // y position within the element.
+                 
+                 footer.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(64, 83, 76, 0.8), rgba(52, 73, 85, 0.4) 50%)`;
+             });
+   
+             footer.addEventListener('mouseleave', function() {
+                 if (!intervalId) {
+                     intervalId = defaultGradient();
+                 }
+             });
+         });
+     </script>
+   </footer>
+</body>
+</html>

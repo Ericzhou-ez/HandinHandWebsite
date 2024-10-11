@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en"><head>
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1" name="viewport">
+   <meta name="theme-color" content="#ffffff">
+
+   <!-- Favicon -->
+   <link rel="icon" href="image/logo.png" type="image/x-icon">
+   
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/bubble.css">
+
+   <title>Hand in Hand</title>
+   </head>
+
+<body>
+   <header>
+      <nav class="nav-container">
+         <ul class="nav-bar" style="list-style-type: none; 
+         background-color: rgb(37, 33, 33);">
+            <div class="left">
+               <li>
+                  <a href="#"><img style="padding: 4px 2px;" class="headerLogo" src="image/logoWhite.png" height="50"></a>
+               </li>
+            </div>
+            <div class="middle"></div>
+            <div class="right">
+               <li class="hide-on-mobile"><a style="color: #ffffff;" href="about.html">About</a></li>
+               <li class="hide-on-mobile"><a style="color: white;" href="events.html">Initiatives</a></li>
+               <li class="hide-on-mobile"><a style="color: white;" href="partners.html">Partners</a></li>
+               <li class="hide-on-mobile" style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
+               <li class="hide-on-laptop" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            </div>
+         </ul>
+
+         <script>
+            function showSidebar() {
+               const sidebar = document.querySelector(".sidebar");
+               sidebar.style.display = "flex";
+            }
+         </script>
+
+         <ul class="sidebar" style="list-style-type: none; background-color: rgb(37, 33, 33);">
+            <div class="left">
+               <li onclick="hideSidebar()" style="margin-top: 30px; margin-left: 15px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+               </li>
+            </div>
+            <div class="middle"></div>
+            <div class="right">
+               <li><a style="color: white;" href="about.html">About</a></li>
+               <li><a style="color: white;" href="events.html">Initiatives</a></li>
+               <li><a style="color: white;" href="partners.html">Partners</a></li>
+               <li style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
+            </div>
+         </ul>
+
+         <script>
+            function hideSidebar() {
+               const sidebar = document.querySelector(".sidebar");
+               sidebar.style.display = "none";
+            }
+         </script>
+      </nav>
+      <link rel="stylesheet" href="css/nav.css">
+      <script src="scripts.js"></script>
+   </header>
+
+   <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="g6"></div>
+        <div class="g7"></div>
+        <div class="g8"></div>
+        <div class="g9"></div>
+        <div class="g10"></div>
+        <div class="g11"></div>
+        <div class="g12"></div>
+        <div class="g13"></div>
+        <div class="g14"></div>
+        <div class="g15"></div>
+        <div class="g16"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+    <script type="module" src="bubble.js"></script>
+
+    <div class="glass-hero"></div>
+
+    <div class="hero-container">
+      <div class="hero-text-container">
+          <h1>Hand in Hand<br/>Together we Thrive</h1>
+          <p>
+            Hand-In-Hand commits to sculpting a world where:
+            Every voice resonates,
+            Every struggle finds solace, and
+            Every hand finds its counterpart in solidarity.
+          </p>
+      </div>
+      <a href="https://docs.google.com/forms/d/13FtRITSln6H3yb7CvkBXTxNGMYBdXeWsE18trga6OOw/viewform?edit_requested=true" target="_blank"><button class="join-button">
+         &#8594; Join Us
+      </button></a>
+   </div>
+   
+   <div class="about-container section">
+      <div class="about-text">
+         <h2 class="autoShow">About Hand in Hand</h2>
+         <p>Founded in 2020, Hand-in-Hand is dedicated to supporting students all aspects of their lives by fostering a vibrant community of empathetic and compassionate youth.</p>
+         <a href="about.html"><button>Learn More</button></a>
+      </div>
+   </div>
+
+   <div class="impact-container section">
+      <div class="impact-header">
+         <div class="impact-header-left">
+            <p>HAND-IN-HAND</p>
+            <h2>Our Impacts</h2>
+         </div>
+         <div class="impact-header-right">
+            <p>&#x1F39E Helping youth build connections from different groups and supporting their mental health <br>
+               &#x1F314; Platform for youth to learn about mental health</p>
+         </div>
+      </div>
+
+      <div class="impact-content">
+         <div class="impact-one">
+            <div class="impact-detail-container">
+               <div class="background">
+                  <img src="image/money-bag-icon.svg" width="50">
+               </div>
+               <h3>$2,000+ Raised</h3>
+            </div>
+            <p style="font-size: 1rem;">Supporting our initiatives through successful fundraising efforts.</p>
+         </div>
+         <div class="impact-two">
+            <div class="impact-detail-container">
+               <div class="background">
+                  <img src="image/briefcase-svgrepo-com.svg" width="50">
+               </div>
+               <h3>200hr+ of Education</h3>
+            </div>
+            <p style="font-size: 1rem;">Providing peer tutoring to empower students academically.</p>
+         </div>
+         <div class="impact-three">
+            <div class="impact-detail-container">
+               <div class="background">
+                  <img src="image/globe-grid-svgrepo-com.svg" width="50">
+               </div>
+               <h3>Two Seminars with 100hr+ of Information</h3>
+            </div>
+            <p style="font-size: 1rem;">Delivering comprehensive mental health education and destigmatization.</p>
+         </div>
+         <div class="impact-four">
+            <div class="impact-detail-container">
+               <div class="background">
+                  <img src="image/phone-call-svgrepo-com (1).svg" width="50">
+               </div>
+               <h3>5,000+ Media Followers</h3>
+            </div>
+            <p style="font-size: 1rem;">Growing our community to spread awareness and support.</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="mission-container section">
+      <div class="mission-text">
+         <h2>Our Misson</h2>
+         <p>
+            Hand in Hand envisions a world where mental health is openly discussed, stigma is eradicated, and every individual's journey is embraced with understanding and empathy.
+         </p>
+         <a href="about.html"><button>Learn More</button></a>
+      </div>
+   </div>
+
+   <footer>
+   <div class="leftFooter">
+
+      <div class=leftFooterText>
+         <img class="footerLogo" src="image/logoWhite.png" width="120">
+         <div class="footerNote">
+            <p style="font-weight: 600;">Hand in Hand <br> Together we Go</p>
+            <p style="font-size: 0.8rem;
+            line-height: 0.9rem;">&copy;Eric Zhou 2024 &#124; Hand in Hand BC.
+            All Rights Reserved.</p>
+         </div>
+      </div>   
+
+      <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
+
+   </div>
+
+   <div class="middleFooter">
+      <div class="aboutUsFooterContainer">
+         <h3>About Us</h3>
+         <a href="about.html"><p>HIH Core Values</p></a>
+         <a href="about.html"><p>Our Executives</p><a>
+         <a href="partners.html"><p>Partners and Sponsors</p></a>
+      </div>
+      <div class="InitiativesFooterContainer">
+         <a href="events.html"><h3>Initiatives</h3></a>
+         <a href="events.html"><p>Peer Tutoring</p></a>
+         <a href="events.html"><p>Fundraisers</p></a>
+         <a href="events.html"><p>HIH Forum</p></a>
+         <a href="https://www.instagram.com/handinhandbc/" target="_blank"><p>Instagram Community</p></a>
+      </div>
+      <div class="ContactFooterContainer">
+         <h3>Contact HIH</h3>
+         <p>club.handinhand@gmail.com</p>
+         <h3>Follow Us</h3>
+         <a href="https://www.instagram.com/handinhandbc/">
+            <img style="margin: 10px 5px;" src="image/nohat.png" width="18">
+         </a>
+      </div>
+   </div>
+
+   <div class="rightFooter">
+      <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
+
+   </div>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const footer = document.querySelector('footer');
+
+          let intervalId = null;
+
+          const defaultGradient = () => {
+              let degree = 0;
+              const updateGradient = () => {
+                  footer.style.backgroundImage = `linear-gradient(${degree}deg, rgba(21, 43, 0. 0.8), rgba(50, 205, 50, 0.05))`;
+                  degree = (degree + 1) % 360;
+              };
+              updateGradient();
+              return setInterval(updateGradient, 40);
+          };
+
+          intervalId = defaultGradient();
+
+          footer.addEventListener('mousemove', function(e) {
+              clearInterval(intervalId);
+              intervalId = null;
+
+              const rect = footer.getBoundingClientRect();
+              const x = e.clientX - rect.left; // x position within the element.
+              const y = e.clientY - rect.top;  // y position within the element.
+              
+              footer.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(64, 83, 76, 0.8), rgba(52, 73, 85, 0.4) 50%)`;
+          });
+
+          footer.addEventListener('mouseleave', function() {
+              if (!intervalId) {
+                  intervalId = defaultGradient();
+              }
+          });
+      });
+  </script>
+  <script src="script.js"></script>
+</footer>
+
+</body></html>
