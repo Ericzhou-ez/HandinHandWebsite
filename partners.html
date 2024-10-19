@@ -17,8 +17,11 @@
    <link rel="icon" href="image/logo.png" type="image/x-icon">
 
    <!--Link to css-->
-   <link rel="preload" href="css/partners.css" as="stylesheet">
-   <link rel="preload" href="css/style.css" as="stylesheet">
+   <link rel="preload" href="css/partners.css" as="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
+   <link rel="preload" href="css/style.css" as="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
+
+   <link rel="stylesheet" src="css/style.css">
+   <link rel="stylesheet" src="css/partners.css">
 
    <link rel="preload" href="image/logoWhite.png" as="image" type="image/png">
    <link rel="preload" href="partnersImage/splashOverlayImage.png" as="image" type="image/png">
