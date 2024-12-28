@@ -1,243 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--Author meta tags-->
-   <meta name="Author" content="Eric Zhou">
-   
-   <!-- Standard Meta Tags -->
-   <meta name="description" content="Join Hand-In-Hand for our upcoming events including fundraising, seminars, peer tutoring, HIH forum, and HIH poetry club. Be a part of the change and support mental well-being.">
-   <meta name="keywords" content="Hand-In-Hand, events, fundraising, seminars, peer tutoring, HIH forum, HIH poetry club, mental health, support, community">
-   <meta name="author" content="Hand-In-Hand Club">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!--Author meta tags-->
+      <meta name="Author" content="Eric Zhou" />
 
-   <!--Fundraising specific meta tags-->
-   <meta name="description" content="Join Hand-In-Hand for our fundraising events to support mental well-being. Your contributions make a difference.">
-   <meta name="keywords" content="Hand-In-Hand, fundraising, mental health, support, donations, charity">
-   <meta property="og:title" content="Fundraising Events - Hand-In-Hand">
-   <meta property="og:description" content="Join Hand-In-Hand for our fundraising events to support mental well-being. Your contributions make a difference.">
-   
-   <!--Seminar specific meta tags-->
-   <meta name="description" content="Attend Hand-In-Hand seminars to learn more about mental health and well-being from experts in the field.">
-   <meta name="keywords" content="Hand-In-Hand, seminars, mental health, education, learning, workshops">
-   <meta property="og:title" content="Seminars - Hand-In-Hand">
-   <meta property="og:description" content="Attend Hand-In-Hand seminars to learn more about mental health and well-being from experts in the field.">
+      <title>Events</title>
 
-   <!--Peer tutoring specific meta tags-->
-   <meta name="description" content="Join our peer tutoring sessions at Hand-In-Hand to get help and support from fellow students on mental health and academics.">
-   <meta name="keywords" content="Hand-In-Hand, peer tutoring, mental health, support, academic help, student support">
-   <meta property="og:title" content="Peer Tutoring - Hand-In-Hand">
-   <meta property="og:description" content="Join our peer tutoring sessions at Hand-In-Hand to get help and support from fellow students on mental health and academics.">
+      <!--Favion link-->
+      <link rel="icon" href="image/logo.png" type="image/x-icon" />
 
-   <!--HIH Forum meta tags-->
-   <meta name="description" content="Participate in the Hand-In-Hand forum to discuss mental health topics and share your experiences in a supportive community.">
-   <meta name="keywords" content="Hand-In-Hand, HIH forum, mental health, discussion, community support, experiences">
-   <meta property="og:title" content="HIH Forum - Hand-In-Hand">
-   <meta property="og:description" content="Participate in the Hand-In-Hand forum to discuss mental health topics and share your experiences in a supportive community.">
+      <!--Link to css-->
+      <link
+         rel="preload"
+         href="css/style.css"
+         as="style"
+         onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <link
+         rel="preload"
+         href="css/footer.css"
+         as="style"
+         onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <link
+         rel="preload"
+         href="css/events.css"
+         as="style"
+         onload="this.onload=null;this.rel='stylesheet'"
+      />
 
-   <!--HIH Poetry Club-->
-   <meta name="description" content="Join the Hand-In-Hand poetry club to express your thoughts and emotions through poetry and connect with others who share your passion.">
-   <meta name="keywords" content="Hand-In-Hand, HIH poetry club, mental health, poetry, creative expression, support, community">
-   <meta property="og:title" content="HIH Poetry Club - Hand-In-Hand">
-   <meta property="og:description" content="Join the Hand-In-Hand poetry club to express your thoughts and emotions through poetry and connect with others who share your passion.">
+      <!-- Preload images -->
+      <link rel="preload" as="image" href="image/1.png" />
+      <link rel="preload" as="image" href="image/2.png" />
+      <link rel="preload" as="image" href="image/3.png" />
+      <link rel="preload" as="image" href="image/4.png" />
+      <link rel="preload" as="image" href="image/5.png" />
 
-   <title>
-      Events
-   </title>
+      <style>
+               #loader {
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 width: 100vw;
+                 height: 100vh;
+                 background-color: #324632;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 z-index: 9999;
+               }
 
-   <!--Favion link-->
-   <link rel="icon" href="image/logo.png" type="image/x-icon">
+               #loader img {
+                 width: 150px;
+                 height: auto;
+               }
 
-   <!--Link to css-->
-   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   <link rel="preload" href="css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   <link rel="preload" href="css/events.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   
-   <!-- Preload images -->
-   <link rel="preload" as="image" href="image/1.png">
-   <link rel="preload" as="image" href="image/2.png">
-   <link rel="preload" as="image" href="image/3.png">
-   <link rel="preload" as="image" href="image/4.png">
-   <link rel="preload" as="image" href="image/5.png">
-</head>
+               @keyframes flyToCorner {
+                 0% {
+                   transform: translate(0, 0) scale(1);
+                   opacity: 1;
+                 }
+                 100% {
+                   transform: translate(-47vw, -48vh) scale(0.26);
+                   opacity: 0.1;
+                 }
+               }
 
-<body>
+               .moveToNav {
+                 animation: flyToCorner 1.5s forwards ease;
+               }
 
-   <header>
-      <nav>
-         <ul class="nav-bar" style="list-style-type: none;">
-            <div class="left">
-               <li>
-                  <a href="index.html"><img style="padding: 4px 2px;" class="headerLogo" src="image/logo.png" height="50"></a>
-               </li>
-            </div>
-            <div class="middle"></div>
-            <div class="right">
-               <li class="hide-on-mobile"><a href="about.html">About</a></li>
-               <li class="hide-on-mobile"><a href="events.html">Initiatives</a></li>
-               <li class="hide-on-mobile"><a href="partners.html">Partners</a></li>
-               <li class="hide-on-mobile" style="text-wrap: nowrap;"><a href="joinus.html">Contact Us</a></li>
-               <li class="hide-on-laptop" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
-            </div>
-         </ul>
+             ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            transition: opacity 0.15s ease-in-out;
+            z-index: 999;
 
-         <script>
-            function showSidebar() {
-               const sidebar = document.querySelector(".sidebar");
-               sidebar.style.display = "flex";
+            position : fixed;
+            width: 100vw;
+            transition: 0.3s background-color;
+         }
+
+         .hidden {
+            display: none;
+         }
+
+         .btn-top {
+            z-index: 50;
+            position: fixed;
+            background-color: rgb(4, 26, 56);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            bottom: 40px;
+            right: 40px;
+            right: 20px;<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m280-400 200-200 200 200H280Z"/></svg>
+         }
+
+         ul > li > img {
+            padding: 5px 5px;
+         }
+
+         li {
+            font-weight: 400;
+         }
+
+         li > a {
+            text-decoration: none;
+            color: black;
+         }
+
+         li > a:hover {
+            color: var(--txtSecondary);
+         }
+
+         li > a:visited {
+            color: rgb(46, 3, 46);
+         }
+
+         .left {
+            flex: 1 1 3%;
+            margin-left: 10px;
+         }
+
+         .middle {
+            flex: 1 3 50%
+         }
+
+         .right {
+            flex: 1.5 0.6 47%;
+            flex-wrap: nowrap;
+
+            max-width: 380px;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 25px;
+
+            margin-right: 25px;
+         }
+
+         .sidebar .middle {
+            display: none;
+         }
+         .sidebar {
+            display: none;
+            margin-right: auto;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 999;
+            width: 60vw;
+            flex-direction: column;
+            place-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-left: 25px;
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+            background-color: transparent !important;
+            backdrop-filter: blur(20px);
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5));
+         }
+         .sidebar .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-left: 25px;
+            font-size: 1.4rem;
+            line-height: 3.3rem;
+         }
+         .sidebar-img {
+            width: 150px;
+            height: auto;
+            margin-top: 25px;
+         }
+         .sidear li {
+            width: 100%;
+         }
+
+         @media screen and (max-width: 550px) {
+            .hide-on-mobile {
+               display: none;
             }
-         </script>
+         }
 
-         <ul class="sidebar" style="list-style-type: none; background-color: rgb(37, 33, 33);">
-            <div class="left">
-               <li onclick="hideSidebar()" style="margin-top: 30px; margin-left: 15px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-               </li>
-            </div>
-            <div class="middle"></div>
-            <div class="right">
-               <li><a style="color: white;" href="about.html">About</a></li>
-               <li><a style="color: white;" href="events.html">Initiatives</a></li>
-               <li><a style="color: white;" href="partners.html">Partners</a></li>
-               <li style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
-            </div>
-         </ul>
-
-         <script>
-            function hideSidebar() {
-               const sidebar = document.querySelector(".sidebar");
-               sidebar.style.display = "none";
+         @media screen and (min-width: 550px) {
+            .hide-on-laptop {
+               display: none;
             }
-         </script>
-      </nav>
+         }
 
-      <link rel="stylesheet" href="css/nav.css">
-   </header>
+         .sticky {
+            position: fixed;
+         }
+      </style>
+      <script>
+         window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            const loaderImg = document.querySelector(".loader-img");
 
-   <main>
+             setTimeout(() => {
+         loader.style.display = "none";
+        }, 250);
+         });
+      </script>
+   </head>
 
-      <div class="banner">
-         <div class="slider" style="--quantity: 5">
-            <div class="item" style="--position: 1">
-               <img src="image/1.png" title="Peer Tutoring">
-            </div>
-            <div class="item" style="--position: 2">
-               <img src="image/2.png" title="HIH Forum">
-            </div>
-            <div class="item" style="--position: 3">
-               <img src="image/3.png" title="Fundraising">
-            </div>
-            <div class="item" style="--position: 4">
-               <img src="image/4.png" title="Seminars">
-            </div>
-            <div class="item" style="--position: 5">
-               <img src="image/5.png" title="Vast Online Presence">
+   <body>
+      <header>
+         <nav>
+            <ul class="nav-bar" style="list-style-type: none">
+               <div class="left">
+                  <li>
+                     <a href="index.html"
+                        ><img
+                           style="padding: 4px 2px"
+                           class="headerLogo"
+                           src="image/logo.png"
+                           height="50"
+                     /></a>
+                  </li>
+               </div>
+               <div class="middle"></div>
+               <div class="right">
+                  <li class="hide-on-mobile"><a href="about.html">About</a></li>
+                  <li class="hide-on-mobile">
+                     <a href="events.html">Initiatives</a>
+                  </li>
+                  <li class="hide-on-mobile">
+                     <a href="partners.html">Partners</a>
+                  </li>
+                  <li class="hide-on-mobile" style="text-wrap: nowrap">
+                     <a href="joinus.html">Contact Us</a>
+                  </li>
+                  <li class="hide-on-laptop" onclick="showSidebar()">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="28px"
+                        viewBox="0 -960 960 960"
+                        width="28px"
+                        fill="#000000"
+                     >
+                        <path
+                           d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                        />
+                     </svg>
+                  </li>
+               </div>
+            </ul>
+
+            <script>
+               function showSidebar() {
+                  const sidebar = document.querySelector(".sidebar");
+                  sidebar.style.display = "flex";
+               }
+            </script>
+
+            <ul
+               class="sidebar"
+               style="list-style-type: none; background-color: rgb(37, 33, 33)"
+            >
+               <div class="left">
+                  <li
+                     onclick="hideSidebar()"
+                     style="margin-top: 30px; margin-left: 15px"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="30px"
+                        viewBox="0 -960 960 960"
+                        width="30px"
+                        fill="#000000"
+                     >
+                        <path
+                           d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                        />
+                     </svg>
+                  </li>
+               </div>
+               <div class="middle"></div>
+               <div class="right">
+                  <li><a style="color: white" href="about.html">About</a></li>
+                  <li>
+                     <a style="color: white" href="events.html">Initiatives</a>
+                  </li>
+                  <li>
+                     <a style="color: white" href="partners.html">Partners</a>
+                  </li>
+                  <li style="text-wrap: nowrap">
+                     <a style="color: white" href="joinus.html">Contact Us</a>
+                  </li>
+               </div>
+            </ul>
+
+            <script>
+               function hideSidebar() {
+                  const sidebar = document.querySelector(".sidebar");
+                  sidebar.style.display = "none";
+               }
+            </script>
+         </nav>
+      </header>
+
+      <div id="loader">
+         <img class="loader-img" src="image/logoWhite.png" alt="Loading..." />
+      </div>
+
+      <main>
+         <div class="banner">
+            <div class="slider" style="--quantity: 5">
+               <div class="item" style="--position: 1">
+                  <img src="image/1.png" title="Peer Tutoring" />
+               </div>
+               <div class="item" style="--position: 2">
+                  <img src="image/2.png" title="HIH Forum" />
+               </div>
+               <div class="item" style="--position: 3">
+                  <img src="image/3.png" title="Fundraising" />
+               </div>
+               <div class="item" style="--position: 4">
+                  <img src="image/4.png" title="Seminars" />
+               </div>
+               <div class="item" style="--position: 5">
+                  <img src="image/5.png" title="Vast Online Presence" />
+               </div>
             </div>
          </div>
-      </div>
 
-      <div class="eventsTitle">
-         <h1>
-            Hand in Hand
-         </h1>
-         <h2 style="font-size: 3.4rem;
-         color: black;
-         background-image: url(image/mushegh-hakobyan-DOOSi8EQuwQ-unsplash.jpg);
-         background-size: cover;
-         -webkit-background-clip: text;
-         -webkit-text-fill-color: transparent;">
-            Events: <span class="typed-text"></span>
-         </h2>
-      </div>
+         <div class="eventsTitle">
+            <h1>Hand in Hand</h1>
+            <h2
+               style="
+                  font-size: 3.4rem;
+                  color: black;
+                  background-image: url(image/mushegh-hakobyan-DOOSi8EQuwQ-unsplash.jpg);
+                  background-size: cover;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+               "
+            >
+               Events: <span class="typed-text"></span>
+            </h2>
+         </div>
 
-      <script>
-         const words = ["Fundraisers.", "Seminars.", "Forum.", "Peer Tutoring.", "Instagram."];
-         let currentWordIndex = 0;
-         let letterIndex = 0;
-         let currentDirection = 'forward';
-         const typingSpeed = 200;
-         const deletingSpeed = 90;
-         const typedTextSpan = document.querySelector(".typed-text");
-     
-         function type() {
-             if (currentDirection === 'forward') {
-                 if (letterIndex < words[currentWordIndex].length) {
-                     typedTextSpan.textContent += words[currentWordIndex].charAt(letterIndex);
+         <script>
+            const words = [
+               "Fundraisers.",
+               "Seminars.",
+               "Forum.",
+               "Peer Tutoring.",
+               "Instagram.",
+            ];
+            let currentWordIndex = 0;
+            let letterIndex = 0;
+            let currentDirection = "forward";
+            const typingSpeed = 200;
+            const deletingSpeed = 90;
+            const typedTextSpan = document.querySelector(".typed-text");
+
+            function type() {
+               if (currentDirection === "forward") {
+                  if (letterIndex < words[currentWordIndex].length) {
+                     typedTextSpan.textContent +=
+                        words[currentWordIndex].charAt(letterIndex);
                      letterIndex++;
                      setTimeout(type, typingSpeed);
-                 } else {
+                  } else {
                      setTimeout(type, 500); // Wait a bit after typing is complete
-                     currentDirection = 'backward';
-                 }
-             } else {
-                 if (letterIndex > 0) {
-                     typedTextSpan.textContent = words[currentWordIndex].substring(0, letterIndex - 1);
+                     currentDirection = "backward";
+                  }
+               } else {
+                  if (letterIndex > 0) {
+                     typedTextSpan.textContent = words[
+                        currentWordIndex
+                     ].substring(0, letterIndex - 1);
                      letterIndex--;
                      setTimeout(type, deletingSpeed);
-                 } else {
+                  } else {
                      currentWordIndex = (currentWordIndex + 1) % words.length; // Move to the next word
-                     currentDirection = 'forward';
+                     currentDirection = "forward";
                      setTimeout(type, 500); // Wait a bit before start typing new word
-                 }
-             }
-         }
-         type();
-      </script>
+                  }
+               }
+            }
+            type();
+         </script>
 
-      <article style="position: absolute; top: 900px;" class="initiatives">
-         <div class="tutor eventContainer">
-            <img class="eventImage" src="image/1.png">
-            
-            <div class="eventDescription">
-               <h3>Peer Tutoring (SFPT)</h3>
+         <article style="position: absolute; top: 900px" class="initiatives">
+            <div class="tutor eventContainer">
+               <img class="eventImage" src="image/1.png" />
 
-               <p>The Hand in Hand Stress-Free Peer Tutoring (SFPT) program empowers 100 underprivileged students across Vancouver each year by imparting more than 200 hours of free education.</p>
+               <div class="eventDescription">
+                  <h3>Peer Tutoring (SFPT)</h3>
+
+                  <p>
+                     The Hand in Hand Stress-Free Peer Tutoring (SFPT) program
+                     empowers 100 underprivileged students across Vancouver each
+                     year by imparting more than 200 hours of free education.
+                  </p>
+               </div>
             </div>
-         </div>
 
-         <div class="forum eventContainer">
-            <img class="eventImage" src="image/2.png">
+            <div class="forum eventContainer">
+               <img class="eventImage" src="image/2.png" />
 
-            <div class="eventDescription">
-               <h3>HIH Forum</h3>
+               <div class="eventDescription">
+                  <h3>HIH Forum</h3>
 
-               <p>The Hand in Hand Poetry Forum provides an anonymous platform for students to express their emotions and find positive coping mechanisms for academic stress. This safe and supportive space fosters a healthy community, reminiscent of a sharing circle.</p>
+                  <p>
+                     The Hand in Hand Poetry Forum provides an anonymous
+                     platform for students to express their emotions and find
+                     positive coping mechanisms for academic stress. This safe
+                     and supportive space fosters a healthy community,
+                     reminiscent of a sharing circle.
+                  </p>
+               </div>
             </div>
-         </div>
 
-         <div class="seminar eventContainer">
-            <img class="eventImage" src="image/3.png">
+            <div class="seminar eventContainer">
+               <img class="eventImage" src="image/3.png" />
 
-            <div class="eventDescription">
-               <h3>Seminars</h3>
+               <div class="eventDescription">
+                  <h3>Seminars</h3>
 
-               <p>The Hand in Hand Poetry Forum provides an anonymous platform for students to express their emotions and find positive coping mechanisms for academic stress. This safe and supportive space fosters a healthy community, reminiscent of a sharing circle.</p>
+                  <p>
+                     The Hand in Hand Poetry Forum provides an anonymous
+                     platform for students to express their emotions and find
+                     positive coping mechanisms for academic stress. This safe
+                     and supportive space fosters a healthy community,
+                     reminiscent of a sharing circle.
+                  </p>
+               </div>
             </div>
-         </div>
 
-         <div class="fund eventContainer">
-            <img class="eventImage" src="image/4.png">
+            <div class="fund eventContainer">
+               <img class="eventImage" src="image/4.png" />
 
-            <div class="eventDescription">
-               <h3>Fundraisers</h3>
+               <div class="eventDescription">
+                  <h3>Fundraisers</h3>
 
-               <p style="padding: 4% 0;
-               padding-right: 18%;
-               line-height: 1.82rem;">Hand in Hand conducts two impactful seminars per annum aimed at promoting the destigmatization of mental health issues. These sessions provide valuable insights and foster open conversations regarding mental health challenges.</p>
+                  <p
+                     style="
+                        padding: 4% 0;
+                        padding-right: 18%;
+                        line-height: 1.82rem;
+                     "
+                  >
+                     Hand in Hand conducts two impactful seminars per annum
+                     aimed at promoting the destigmatization of mental health
+                     issues. These sessions provide valuable insights and foster
+                     open conversations regarding mental health challenges.
+                  </p>
+               </div>
             </div>
-         </div>
 
-         <div class="social eventContainer">
-            <img class="eventImage" src="image/5.png">
+            <div class="social eventContainer">
+               <img class="eventImage" src="image/5.png" />
 
-            <div class="eventDescription">
-               <h3>Vast Online Presence</h3>
+               <div class="eventDescription">
+                  <h3>Vast Online Presence</h3>
 
-               <p>Hand in Hand has built a loyal and engaging community of over 5 000 Instagram followers. Through regular interactions and Instagram stories, we maintain an active dialogue and support network.</p>
+                  <p>
+                     Hand in Hand has built a loyal and engaging community of
+                     over 5 000 Instagram followers. Through regular
+                     interactions and Instagram stories, we maintain an active
+                     dialogue and support network.
+                  </p>
+               </div>
             </div>
-         </div>
-      </article>
-   </main>
-
-</body>
+         </article>
+      </main>
+   </body>
 </html>

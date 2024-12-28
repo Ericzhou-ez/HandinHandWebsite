@@ -1,222 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--Author meta tags-->
-   <meta name="Author" content="Eric Zhou">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!--Author meta tags-->
+      <meta name="Author" content="Eric Zhou" />
 
-   <meta name="description" content="Join Hand-In-Hand for our fundraising events to support mental well-being. Your contributions make a difference.">
-   <meta name="keywords" content="Hand-In-Hand, fundraising, mental health, support, donations, charity">
+      <meta
+         name="description"
+         content="Join Hand-In-Hand for our fundraising events to support mental well-being. Your contributions make a difference."
+      />
+      <meta
+         name="keywords"
+         content="Hand-In-Hand, fundraising, mental health, support, donations, charity"
+      />
 
-   <title>
-      Our Partners
-   </title>
+      <title>Our Partners</title>
 
-   <!--Favion link-->
-   <link rel="icon" href="image/logo.png" type="image/x-icon">
+      <!--Favion link-->
+      <link rel="icon" href="image/logo.png" type="image/x-icon" />
 
-   <!-- Link to CSS files, using preload with onload to apply them as stylesheets -->      
-   <link rel="preload" href="css/partners.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   
-   <!-- Preload images -->
-   <link rel="preload" href="image/logoWhite.png" as="image">
-   <link rel="preload" href="partnersImage/splashOverlayImage.png" as="image">
-   <link rel="preload" href="partnersImage/smallSplashPartner.png" as="image">
-   <link rel="preload" href="partnersImage/largeSplashPartner.png" as="image">
-   <link rel="preload" href="partnersImage/blubc.png" as="image">
-   <link rel="preload" href="partnersImage/codeconnect.png" as="image">
-   <link rel="preload" href="partnersImage/covenanthouse.png" as="image">
+      <!-- Link to CSS files, using preload with onload to apply them as stylesheets -->
+      <link
+         rel="preload"
+         href="css/partners.css"
+         as="style"
+         onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <link
+         rel="preload"
+         href="css/style.css"
+         as="style"
+         onload="this.onload=null;this.rel='stylesheet'"
+      />
 
-</head>
+      <!-- Preload images -->
+      <link rel="preload" href="image/logoWhite.png" as="image" />
+      <link
+         rel="preload"
+         href="partnersImage/splashOverlayImage.png"
+         as="image"
+      />
+      <link
+         rel="preload"
+         href="partnersImage/smallSplashPartner.png"
+         as="image"
+      />
+      <link
+         rel="preload"
+         href="partnersImage/largeSplashPartner.png"
+         as="image"
+      />
+      <link rel="preload" href="partnersImage/blubc.png" as="image" />
+      <link rel="preload" href="partnersImage/codeconnect.png" as="image" />
+      <link rel="preload" href="partnersImage/covenanthouse.png" as="image" />
 
-<body>
-   <header>
-      <nav>
-         <ul class="nav-bar" style="list-style-type: none; 
-         background-color: rgb(37, 33, 33);">
-            <div class="left">
-               <li>
-                  <a href="index.html"><img style="padding: 4px 2px;" class="headerLogo" src="image/logoWhite.png" height="50"></a>
-               </li>
-            </div>
-            <div class="middle"></div>
-            <div class="right">
-               <li class="hide-on-mobile"><a style="color: #ffffff;" href="about.html">About</a></li>
-               <li class="hide-on-mobile"><a style="color: white;" href="events.html">Initiatives</a></li>
-               <li class="hide-on-mobile"><a style="color: white;" href="partners.html">Partners</a></li>
-               <li class="hide-on-mobile" style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
-               <li class="hide-on-laptop" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
-            </div>
-         </ul>
+     <style>
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #324632; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
 
-         <script>
-            function showSidebar() {
-               const sidebar = document.querySelector(".sidebar");
-               sidebar.style.display = "flex";
-            }
-         </script>
+      #loader img {
+        width: 150px;
+        height: auto;
+      }
 
-         <ul class="sidebar" style="list-style-type: none; background-color: rgb(37, 33, 33);">
-            <div class="left">
-               <li onclick="hideSidebar()" style="margin-top: 30px; margin-left: 15px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-               </li>
-            </div>
-            <div class="middle"></div>
-            <div class="right">
-               <li><a style="color: white;" href="about.html">About</a></li>
-               <li><a style="color: white;" href="events.html">Initiatives</a></li>
-               <li><a style="color: white;" href="partners.html">Partners</a></li>
-               <li style="text-wrap: nowrap;"><a style="color: white;" href="joinus.html">Contact Us</a></li>
-            </div>
-         </ul>
+      @keyframes flyToCorner {
+        0% {
+          transform: translate(0, 0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-47vw, -48vh) scale(0.26);
+          opacity: 0.1;
+        }
+      }
 
-         <script>
-            function hideSidebar() {
-               const sidebar = document.querySelector(".sidebar");
-               sidebar.style.display = "none";
-            }
-         </script>
-      </nav>
+      .moveToNav {
+        animation: flyToCorner 1.5s forwards ease;
+      }
 
-      <link rel="stylesheet" href="css/nav.css">
-   </header>
+    ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: stretch;
+   transition: opacity 0.15s ease-in-out;
+   z-index: 999;
 
-   <div class="splashBannerContainer">
-      <img class="splashBanner" src="partnersImage/splashOverlayImage.png">
-      <img class="smallSplashBanner" src="partnersImage/smallSplashPartner.png">
-      <img class="largeSplashBanner" src="partnersImage/largeSplashPartner.png">
-   </div>
+   position : fixed;
+   width: 100vw;
+   transition: 0.3s background-color;
+}
 
-   <div class="wrapper">
-      <section class="heading">
-         <h1 style=
-            "font-weight: 900;
-            font-size: 2.5rem; 
-            word-spacing: 0.35rem; 
-            color: transparent;
-            background-image: linear-gradient(to bottom left, rgb(178, 206, 178),  #8ca810, #004c2f);
-            -webkit-background-clip: text;">PARTNERS AND SPONSORS</h1>
-         <p class="partnerAppreciationMessage">We are honored to be supported by our esteemed partners and sponsors, who are true leaders and innovators in their respective fields. Their world-class expertise and invaluable opportunities profoundly benefit our members and our mission.</p>
-      </section>
+.hidden {
+   display: none;
+}
 
-      <main>
-         <section class="partnerContainer">
-            <article class="partner" id="blubc">
-               <img class="partnerImage" src="partnersImage/blubc.png" title="BL Consulting" alt="BL Educational Consulting">
+.btn-top {
+   z-index: 50;
+   position: fixed;
+   background-color: rgb(4, 26, 56);
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   bottom: 40px;
+   right: 40px;
+   right: 20px;<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m280-400 200-200 200 200H280Z"/></svg>
+}
 
-               <p><a href="https://bleducation.ca" target="_blank">BL Education Consulting</a> is a world-renowned educational institution that aids students in preparing for university. They provide us with not only <strong>valuable resources and guidance</strong> from their counselors, but also <strong>financially support us</strong>.</p>
-            </article>
+ul > li > img {
+   padding: 5px 5px;
+}
 
-            <article class="partner" id="codeconnect">
-               <img class="partnerImage" src="partnersImage/codeconnect.png" title="Code Connect" alt="Code Connect Non-Profit">
-               
-               <p><a href="https://codeconnect.ca" target="_blank">Code Connect</a> is a non-profit based in Vancouver and their mission is to <strong>bridge the digital divide</strong>, allowing all students access to coding education. We have partnered with them to provide peer tutoring. </p>
-            </article>
+li {
+   font-weight: 400;
+}
 
-            <article class="partner" id="moodpsych">
-               <img class="partnerImage" style="max-width: 8rem; height: auto; justify-self: center;" src="partnersImage/moodpsych.webp" title="Mood Psychology UBC" alt="Mood Psychology UBC Club">
-               
-               <p>Mood Psych UBC partnered with us to conduct <strong>seminars focused on the destigmatization of mental health issues</strong>. Additionally, they provide an anonymous <a href="https://padlet.com/moodpsycubc/ubc-r3zqcqfq6omzo8xl" target="_blank">Chinese disscussion forum</a>, creating a safe space for international students studying abroad.</p>
-            </article>
+li > a {
+   text-decoration: none;
+   color: black;
+}
 
-            <article class="partner" id="covenanthouse">
-               <img class="partnerImage" src="partnersImage/covenanthouse.png" title="Covenant House Vancouver" alt="Covenant House Vancouver">
-               
-               <p><a href="https://www.covenanthousebc.org" target="_blank">Covenant House Vancouver</a> is an organization supporting homeless teenagers and addressing their mental health issues. We have proudly donated <strong>over $2000</strong> to their cause and had the privilege of assisting them in writing messages to their donors.</p>
-            </article>
+li > a:hover {
+   color: var(--txtSecondary);
+}
+
+li > a:visited {
+   color: rgb(46, 3, 46);
+}
+
+.left {
+   flex: 1 1 3%;
+   margin-left: 10px;
+}
+
+.middle {
+   flex: 1 3 50%
+}
+
+.right {
+   flex: 1.5 0.6 47%;
+   flex-wrap: nowrap;
+
+   max-width: 380px;
+
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 25px;
+
+   margin-right: 25px;
+}
+
+.sidebar .middle {
+   display: none;
+}
+.sidebar {
+   display: none;
+   margin-right: auto;
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100vh;
+   z-index: 999;
+   width: 60vw;
+   flex-direction: column;
+   place-content: center;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding-left: 25px;
+   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+   background-color: transparent !important;
+   backdrop-filter: blur(20px);
+   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5));
+}
+.sidebar .right {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding-left: 25px;
+   font-size: 1.4rem;
+   line-height: 3.3rem;
+}
+.sidebar-img {
+   width: 150px;
+   height: auto;
+   margin-top: 25px;
+}
+.sidear li {
+   width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+   .hide-on-mobile {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 550px) {
+   .hide-on-laptop {
+      display: none;
+   }
+}
+
+.sticky {
+   position: fixed;
+}
+
+   </style>
+   <script>
+      window.addEventListener("load", function () {
+        const loader = document.getElementById("loader");
+        const loaderImg = document.querySelector(".loader-img");
+
+        setTimeout(() => {
+         loader.style.display = "none";
+        }, 250);
+      });
+    </script>
+   </head>
+
+   <body>
+      <header>
+         <nav>
+            <ul
+               class="nav-bar"
+               style="list-style-type: none; background-color: rgb(37, 33, 33)"
+            >
+               <div class="left">
+                  <li>
+                     <a href="index.html"
+                        ><img
+                           style="padding: 4px 2px"
+                           class="headerLogo"
+                           src="image/logoWhite.png"
+                           height="50"
+                     /></a>
+                  </li>
+               </div>
+               <div class="middle"></div>
+               <div class="right">
+                  <li class="hide-on-mobile">
+                     <a style="color: #ffffff" href="about.html">About</a>
+                  </li>
+                  <li class="hide-on-mobile">
+                     <a style="color: white" href="events.html">Initiatives</a>
+                  </li>
+                  <li class="hide-on-mobile">
+                     <a style="color: white" href="partners.html">Partners</a>
+                  </li>
+                  <li class="hide-on-mobile" style="text-wrap: nowrap">
+                     <a style="color: white" href="joinus.html">Contact Us</a>
+                  </li>
+                  <li class="hide-on-laptop" onclick="showSidebar()">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="28px"
+                        viewBox="0 -960 960 960"
+                        width="28px"
+                        fill="#ffffff"
+                     >
+                        <path
+                           d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                        />
+                     </svg>
+                  </li>
+               </div>
+            </ul>
+
+            <script>
+               function showSidebar() {
+                  const sidebar = document.querySelector(".sidebar");
+                  sidebar.style.display = "flex";
+               }
+            </script>
+
+            <ul
+               class="sidebar"
+               style="list-style-type: none; background-color: rgb(37, 33, 33)"
+            >
+               <div class="left">
+                  <li
+                     onclick="hideSidebar()"
+                     style="margin-top: 30px; margin-left: 15px"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="30px"
+                        viewBox="0 -960 960 960"
+                        width="30px"
+                        fill="#FFFFFF"
+                     >
+                        <path
+                           d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                        />
+                     </svg>
+                  </li>
+               </div>
+               <div class="middle"></div>
+               <div class="right">
+                  <li><a style="color: white" href="about.html">About</a></li>
+                  <li>
+                     <a style="color: white" href="events.html">Initiatives</a>
+                  </li>
+                  <li>
+                     <a style="color: white" href="partners.html">Partners</a>
+                  </li>
+                  <li style="text-wrap: nowrap">
+                     <a style="color: white" href="joinus.html">Contact Us</a>
+                  </li>
+               </div>
+            </ul>
+
+            <script>
+               function hideSidebar() {
+                  const sidebar = document.querySelector(".sidebar");
+                  sidebar.style.display = "none";
+               }
+            </script>
+         </nav>
+      </header>
+
+      <div id="loader">
+      <img class="loader-img" src="image/logoWhite.png" alt="Loading..." />
+    </div>
+
+      <div class="splashBannerContainer">
+         <img class="splashBanner" src="partnersImage/splashOverlayImage.png" />
+         <img
+            class="smallSplashBanner"
+            src="partnersImage/smallSplashPartner.png"
+         />
+         <img
+            class="largeSplashBanner"
+            src="partnersImage/largeSplashPartner.png"
+         />
+      </div>
+
+      <div class="wrapper">
+         <section class="heading">
+            <h1
+               style="
+                  font-weight: 900;
+                  font-size: 2.5rem;
+                  word-spacing: 0.35rem;
+                  color: transparent;
+                  background-image: linear-gradient(
+                     to bottom left,
+                     rgb(178, 206, 178),
+                     #8ca810,
+                     #004c2f
+                  );
+                  -webkit-background-clip: text;
+               "
+            >
+               PARTNERS AND SPONSORS
+            </h1>
+            <p class="partnerAppreciationMessage">
+               We are honored to be supported by our esteemed partners and
+               sponsors, who are true leaders and innovators in their respective
+               fields. Their world-class expertise and invaluable opportunities
+               profoundly benefit our members and our mission.
+            </p>
          </section>
-      </main>
-   </div>
 
-   <footer>
-      <div class="leftFooter">
+         <main>
+            <section class="partnerContainer">
+               <article class="partner" id="blubc">
+                  <img
+                     class="partnerImage"
+                     src="partnersImage/blubc.png"
+                     title="BL Consulting"
+                     alt="BL Educational Consulting"
+                  />
 
-         <div class=leftFooterText>
-            <img class="footerLogo" src="image/logoWhite.png" width="120">
-            <div class="footerNote">
-               <p style="font-weight: 600; color: white;">Hand in Hand <br> Together we Go</p>
-               <p style="font-size: 0.8rem;
-               line-height: 0.9rem;
-               color: white;">&copy;Eric Zhou 2024 &#124; Hand in Hand BC.
-               All Rights Reserved.</p>
+                  <p>
+                     <a href="https://bleducation.ca" target="_blank"
+                        >BL Education Consulting</a
+                     >
+                     is a world-renowned educational institution that aids
+                     students in preparing for university. They provide us with
+                     not only
+                     <strong>valuable resources and guidance</strong> from their
+                     counselors, but also
+                     <strong>financially support us</strong>.
+                  </p>
+               </article>
+
+               <article class="partner" id="codeconnect">
+                  <img
+                     class="partnerImage"
+                     src="partnersImage/codeconnect.png"
+                     title="Code Connect"
+                     alt="Code Connect Non-Profit"
+                  />
+
+                  <p>
+                     <a href="https://codeconnect.ca" target="_blank"
+                        >Code Connect</a
+                     >
+                     is a non-profit based in Vancouver and their mission is to
+                     <strong>bridge the digital divide</strong>, allowing all
+                     students access to coding education. We have partnered with
+                     them to provide peer tutoring.
+                  </p>
+               </article>
+
+               <article class="partner" id="moodpsych">
+                  <img
+                     class="partnerImage"
+                     style="max-width: 8rem; height: auto; justify-self: center"
+                     src="partnersImage/moodpsych.webp"
+                     title="Mood Psychology UBC"
+                     alt="Mood Psychology UBC Club"
+                  />
+
+                  <p>
+                     Mood Psych UBC partnered with us to conduct
+                     <strong
+                        >seminars focused on the destigmatization of mental
+                        health issues</strong
+                     >. Additionally, they provide an anonymous
+                     <a
+                        href="https://padlet.com/moodpsycubc/ubc-r3zqcqfq6omzo8xl"
+                        target="_blank"
+                        >Chinese disscussion forum</a
+                     >, creating a safe space for international students
+                     studying abroad.
+                  </p>
+               </article>
+
+               <article class="partner" id="covenanthouse">
+                  <img
+                     class="partnerImage"
+                     src="partnersImage/covenanthouse.png"
+                     title="Covenant House Vancouver"
+                     alt="Covenant House Vancouver"
+                  />
+
+                  <p>
+                     <a href="https://www.covenanthousebc.org" target="_blank"
+                        >Covenant House Vancouver</a
+                     >
+                     is an organization supporting homeless teenagers and
+                     addressing their mental health issues. We have proudly
+                     donated <strong>over $2000</strong> to their cause and had
+                     the privilege of assisting them in writing messages to
+                     their donors.
+                  </p>
+               </article>
+            </section>
+         </main>
+      </div>
+
+      <footer>
+         <div class="leftFooter">
+            <div class="leftFooterText">
+               <img class="footerLogo" src="image/logoWhite.png" width="120" />
+               <div class="footerNote">
+                  <p style="font-weight: 600; color: white">
+                     Hand in Hand <br />
+                     Together we Go
+                  </p>
+                  <p
+                     style="
+                        font-size: 0.8rem;
+                        line-height: 0.9rem;
+                        color: white;
+                     "
+                  >
+                     &copy;Eric Zhou 2024 &#124; Hand in Hand BC. All Rights
+                     Reserved.
+                  </p>
+               </div>
             </div>
-         </div>   
 
-         <a href="index.html"><img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage"></a>
-
-      </div>
-
-      <div class="middleFooter">
-         <div class="aboutUsFooterContainer">
-            <h3>About Us</h3>
-            <a href="about.html"><p style="color: white;">HIH Core Values</p></a>
-            <a href="about.html"><p style="color: white;">Our Executives</p></a>
-            <a href="partners.html"><p style="color: white;">Partners and Sponsors</p></a>
+            <a href="index.html"
+               ><img
+                  src="image/Untitled (600 x 250 px) (220 x 250 px).png"
+                  class="heroImage"
+            /></a>
          </div>
-         <div class="InitiativesFooterContainer">
-            <h3>Initiatives</h3>
-            <a href="events.html"><p style="color: white;">Peer Tutoring</p></a>
-            <a href="events.html"><p style="color: white;">Fundraisers</p></a>
-            <a href="events.html"><p style="color: white;">HIH Forum</p></a>
-            <a href="events.html"><p style="color: white;">Instagram Community</p></a>
-         </div>
-         <div class="ContactFooterContainer">
-            <h3>Contact HIH</h3>
-            <p style="color: white;">club.handinhand@gmail.com</p>
-            <h3>Follow Us</h3>
-            <a href="https://www.instagram.com/handinhandbc/">
-               <img style="margin: 10px 5px;" src="image/nohat.png" width="18">
-            </a>
-         </div>
-      </div>
 
-      <div class="rightFooter">
-         <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
+         <div class="middleFooter">
+            <div class="aboutUsFooterContainer">
+               <h3>About Us</h3>
+               <a href="about.html"
+                  ><p style="color: white">HIH Core Values</p></a
+               >
+               <a href="about.html"
+                  ><p style="color: white">Our Executives</p></a
+               >
+               <a href="partners.html"
+                  ><p style="color: white">Partners and Sponsors</p></a
+               >
+            </div>
+            <div class="InitiativesFooterContainer">
+               <h3>Initiatives</h3>
+               <a href="events.html"
+                  ><p style="color: white">Peer Tutoring</p></a
+               >
+               <a href="events.html"><p style="color: white">Fundraisers</p></a>
+               <a href="events.html"><p style="color: white">HIH Forum</p></a>
+               <a href="events.html"
+                  ><p style="color: white">Instagram Community</p></a
+               >
+            </div>
+            <div class="ContactFooterContainer">
+               <h3>Contact HIH</h3>
+               <p style="color: white">club.handinhand@gmail.com</p>
+               <h3>Follow Us</h3>
+               <a href="https://www.instagram.com/handinhandbc/">
+                  <img
+                     style="margin: 10px 5px"
+                     src="image/nohat.png"
+                     width="18"
+                  />
+               </a>
+            </div>
+         </div>
 
-      </div>
-   
-      <script>
-         document.addEventListener('DOMContentLoaded', function() {
-             const footer = document.querySelector('footer');
-   
-             let intervalId = null;
-   
-             const defaultGradient = () => {
-                 let degree = 0;
-                 const updateGradient = () => {
+         <div class="rightFooter">
+            <img
+               src="image/Untitled (600 x 250 px) (220 x 250 px).png"
+               class="heroImage"
+            />
+         </div>
+
+         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+               const footer = document.querySelector("footer");
+
+               let intervalId = null;
+
+               const defaultGradient = () => {
+                  let degree = 0;
+                  const updateGradient = () => {
                      footer.style.backgroundImage = `linear-gradient(${degree}deg, rgba(21, 43, 0. 0.8), rgba(50, 205, 50, 0.05))`;
                      degree = (degree + 1) % 360;
-                 };
-                 updateGradient();
-                 return setInterval(updateGradient, 40);
-             };
-   
-             intervalId = defaultGradient();
-   
-             footer.addEventListener('mousemove', function(e) {
-                 clearInterval(intervalId);
-                 intervalId = null;
-   
-                 const rect = footer.getBoundingClientRect();
-                 const x = e.clientX - rect.left; // x position within the element.
-                 const y = e.clientY - rect.top;  // y position within the element.
-                 
-                 footer.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(64, 83, 76, 0.8), rgba(52, 73, 85, 0.4) 50%)`;
-             });
-   
-             footer.addEventListener('mouseleave', function() {
-                 if (!intervalId) {
+                  };
+                  updateGradient();
+                  return setInterval(updateGradient, 40);
+               };
+
+               intervalId = defaultGradient();
+
+               footer.addEventListener("mousemove", function (e) {
+                  clearInterval(intervalId);
+                  intervalId = null;
+
+                  const rect = footer.getBoundingClientRect();
+                  const x = e.clientX - rect.left; // x position within the element.
+                  const y = e.clientY - rect.top; // y position within the element.
+
+                  footer.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(64, 83, 76, 0.8), rgba(52, 73, 85, 0.4) 50%)`;
+               });
+
+               footer.addEventListener("mouseleave", function () {
+                  if (!intervalId) {
                      intervalId = defaultGradient();
-                 }
-             });
-         });
-     </script>
-   </footer>
-   <link rel="stylesheet" href="css/footer.css">
-
-</body>
-
+                  }
+               });
+            });
+         </script>
+      </footer>
+      <link rel="stylesheet" href="css/footer.css" />
+   </body>
 </html>

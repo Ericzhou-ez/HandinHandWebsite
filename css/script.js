@@ -25,3 +25,24 @@ const observerNav = new IntersectionObserver(
 );
 observerNav.observe(section1);
 
+document.addEventListener("DOMContentLoaded", function () {
+   const track = document.querySelector(".sponsor-track");
+   track.innerHTML += track.innerHTML;
+
+   let position = 0;
+   const scrollSpeed = 0.45;
+
+   function animate() {
+      position -= scrollSpeed;
+
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+         position = 0;
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+      requestAnimationFrame(animate);
+   }
+
+   animate();
+});
+

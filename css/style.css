@@ -33,38 +33,6 @@ html {
    background-color: hsl(240, 8%, 97%);
 }
 
-body::-webkit-scrollbar {
-   width: 0.40rem;
-   transition: width 0.2s ease-in-out;
-}
-
-body::-webkit-scrollbar:hover {
-   width: 0.50rem;
-}
-
-body::-webkit-scrollbar-track {
-   background-color: rgb(183, 180, 140);
-   border-radius: 0.2rem;
-   width: 0.4rem;
-}
-
-body::-webkit-scrollbar-track:hover {
-   background-color: rgb(199, 196, 155);
-   width: 0.5rem;
-}
-
-body::-webkit-scrollbar-thumb {
-   background: rgb(81, 96, 6);
-   border-radius: 0.2rem;
-   width: 0.4rem;
-   height: 1rem;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-   background: rgb(9, 104, 77);
-   width: 0.5rem;
-}
-
 .autoShow {
    animation: autoShowAnimation both;
    animation-timeline: view(40% 30%);
