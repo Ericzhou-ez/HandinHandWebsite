@@ -162,9 +162,10 @@
 }
 
 .initiatives {
-    margin: 0 5vw;
+    padding: 0 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-content: center;
 }
 
 @media screen and (max-width: 1540px) {
@@ -252,11 +253,11 @@
     
     .eventDescription h3 {
         font-size: 2rem;
-        padding: 0 1% !important;
+        padding: 0 5% !important;
     }
     
     .eventDescription p {
-        padding: 0 1% !important;
+        padding: 0 5% !important;
         padding-right: 0 !important;
         line-height: 1.82rem;
     }
@@ -285,11 +286,18 @@
 .eventImage {
     display: inline-block;
     
-    max-width: 300px;
+    width: 300px;
+    max-width: 80vw;
     height: auto;
     border-radius: 20px;
 
-    object-fit: contain;
+    object-fit: scale-down;
+}
+
+@media screen and (max-width: 400px) {
+    .eventImage {
+        width: 280px;
+    }
 }
 
 .eventDescription {
