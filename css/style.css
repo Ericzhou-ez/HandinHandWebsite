@@ -10,13 +10,15 @@
    --txtTertiary: #afb3a5;
 }
 
-.highlight {
-    background-color: rgba(0, 0, 0, 0.74); 
+::selection {
+    background-color: rgba(0, 0, 0, 0.75); 
     color: white; 
     padding: 1px; /* Adjust padding as needed */
-    border-radius: 3px; /* Optional: for softer edges */
 }
 
+img {
+   -webkit-user-drag: none;
+}
 
 p {
    line-height: 1.6rem;

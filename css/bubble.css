@@ -59,7 +59,7 @@ html, body {
 
     .gradient-bg {
          width: 100vw;
-         height: calc(100vh - 55px);
+         height: calc(95vh - 55px);
          position: relative;
          overflow: hidden;
          background: url('../image/download.png');
@@ -233,7 +233,7 @@ html, body {
        
        .hero-container {
         position: absolute;
-        top: calc(28vh - 45px);
+        top: calc(24vh - 45px);
        }
       
        .glass-hero {
@@ -241,7 +241,7 @@ html, body {
         top: 30px;
         margin: 5vh 3vw;
         width: 94vw;
-        height: calc(90vh - 55px);
+        height: calc(80vh - 55px);
         background-color: transparent;
         backdrop-filter: blur(10px);
         background-image: linear-gradient(
@@ -541,7 +541,7 @@ html, body {
 
 .sponsor-item {
    flex: 0 0 auto;
-   padding: 0 50px;
+   padding: 0 20px;
 }
 
 .sponsor-item img {
@@ -550,7 +550,6 @@ html, body {
    filter: grayscale(100%);
    -webkit-user-drag: none;
   -moz-user-drag: none;
-  user-drag: none;
 }
 
 .sponsor-container::before,

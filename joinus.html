@@ -359,7 +359,7 @@ li > a:visited {
                   heroText.style.opacity = 0;
                }
 
-               const bgStartScroll = 0.000000001;
+               const bgStartScroll = 0;
                const bgEndScroll = 0.12;
 
                if (scrollPercent > bgStartScroll) {
@@ -385,90 +385,5 @@ li > a:visited {
             });
          </script>
       </main>
-
-      <footer>
-   <div class="leftFooter">
-
-      <div class=leftFooterText>
-         <img class="footerLogo" src="image/logoWhite.png" width="120">
-         <div class="footerNote">
-            <p style="font-weight: 600;">Hand in Hand <br> Together we Go</p>
-            <p style="font-size: 0.8rem;
-            line-height: 0.9rem;">&copy;Eric Zhou 2024 &#124; Hand in Hand BC.
-            All Rights Reserved.</p>
-         </div>
-      </div>   
-
-      <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
-
-   </div>
-
-   <div class="middleFooter">
-      <div class="aboutUsFooterContainer">
-         <h3>About Us</h3>
-         <a href="about.html"><p>HIH Core Values</p></a>
-         <a href="about.html"><p>Our Executives</p><a>
-         <a href="partners.html"><p>Partners and Sponsors</p></a>
-      </div>
-      <div class="InitiativesFooterContainer">
-         <a href="events.html"><h3>Initiatives</h3></a>
-         <a href="events.html"><p>Peer Tutoring</p></a>
-         <a href="events.html"><p>Fundraisers</p></a>
-         <a href="events.html"><p>HIH Forum</p></a>
-         <a href="https://www.instagram.com/handinhandbc/" target="_blank"><p>Instagram Community</p></a>
-      </div>
-      <div class="ContactFooterContainer">
-         <h3>Contact HIH</h3>
-         <p>club.handinhand@gmail.com</p>
-         <h3>Follow Us</h3>
-         <a href="https://www.instagram.com/handinhandbc/">
-            <img style="margin: 10px 5px;" src="image/nohat.png" width="18">
-         </a>
-      </div>
-   </div>
-
-   <div class="rightFooter">
-      <img src="image/Untitled (600 x 250 px) (220 x 250 px).png" class="heroImage">
-
-   </div>
-
-   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          const footer = document.querySelector('footer');
-
-          let intervalId = null;
-
-          const defaultGradient = () => {
-              let degree = 0;
-              const updateGradient = () => {
-                  footer.style.backgroundImage = `linear-gradient(${degree}deg, rgba(21, 43, 0. 0.8), rgba(50, 205, 50, 0.05))`;
-                  degree = (degree + 1) % 360;
-              };
-              updateGradient();
-              return setInterval(updateGradient, 40);
-          };
-
-          intervalId = defaultGradient();
-
-          footer.addEventListener('mousemove', function(e) {
-              clearInterval(intervalId);
-              intervalId = null;
-
-              const rect = footer.getBoundingClientRect();
-              const x = e.clientX - rect.left; // x position within the element.
-              const y = e.clientY - rect.top;  // y position within the element.
-              
-              footer.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(64, 83, 76, 0.8), rgba(52, 73, 85, 0.4) 50%)`;
-          });
-
-          footer.addEventListener('mouseleave', function() {
-              if (!intervalId) {
-                  intervalId = defaultGradient();
-              }
-          });
-      });
-  </script>
-  <script src="css/script.js"></script>
-</footer>
    </body>
 </html>
